@@ -1,0 +1,116 @@
+/*
+ * File       : styles.css
+ * Author     : SEONWOO-KIM (EHCOSOFT)
+ * Date       : 2023. 03. 23.
+ * Dependency : css/codinglist.css
+ */
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Pretendard-Regular';
+    margin: 0;
+    padding: 0;
+}
+
+caption {
+    font-size: 0;
+}
+
+.header {
+    align-items: center;
+    background: #222;
+    display: flex;
+    height: 100px;
+    justify-content: space-between;
+    padding: 0 60px;
+}
+
+.header h1 {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.header img{ 
+    height: 20px;
+}
+
+.main {
+    padding: 60px;
+}
+
+.top_bar {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 0 12px 0;
+}
+
+.count ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.count ul li::after {
+    content: '/';
+    margin: 0 8px;
+}
+
+.count ul li:last-child::after {
+    display: none;
+}
+
+.count ul li i {
+    font-weight: 700;
+    margin: 0 4px 0 0;
+}
+
+.blue {
+    color: blue !important;
+}
+
+.orange {
+    color: orange !important;
+}
+
+.grey {
+    color: grey !important;
+}
+
+.table_base table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.table_base thead th {
+    border: 1px solid #ccc;
+    background: #222;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    height: 40px;
+    text-align: center;
+}
+
+.table_base tbody tr:nth-child(2n) {
+    background: #f1f1f1;
+}
+
+.table_base tbody td {
+    border: 1px solid #dbdbdb;
+    color: #333;
+    font-size: 14px;
+    height: 40px;
+    text-align: center;
+    padding: 0 12px;
+}
+
+.table_base tbody td.ta_l {
+    text-align: left;
+}
