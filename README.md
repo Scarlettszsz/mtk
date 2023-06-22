@@ -15,9 +15,9 @@
    * javascript
 
 # 4. 참조 플러그인
-   * jquery
-   * fullpage
-   * bootstrap
+   * jquery v3.5.1
+   * fullpage v4.0.19
+   * bootstrap v5.1.3
 
 
 # 5. 수정이력
