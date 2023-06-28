@@ -1,0 +1,115 @@
+/* swiper 기본옵션 */
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* listSwiper */
+.listSwiper .swiper {
+    width: 90%;
+}
+
+.listSwiper .swiper-wrapper {
+    align-items: center;
+}
+
+.listSwiper .swiper-slide {
+    max-width: 100%;
+    transition: all .25s ease-out;
+    transform: scale(.7);
+    transform-origin: center;
+}
+
+.listSwiper .swiper-slide-active {
+    transform: scale(1);
+}
+
+.listSwiper .slide_box {
+    align-items: center;
+    border-radius: 8px;
+    box-shadow: -3px -4px 5px 0 rgba(255, 255, 255, 0.7), 2px 3px 5px 0 rgba(124, 126, 130, 0.41);
+    display: flex;
+    flex-direction: column;
+    padding: 16px 0;
+    width: 100%;
+}
+
+.listSwiper .slide_box h5 {
+    color: #000;
+    font-size: 14px;
+    font-weight: 700;
+    margin: 8px 0 0 0;
+}
+
+.listSwiper .slide_box img {
+    width: 52px;
+}
+
+.listSwiper .swiper-slide-active .slide_box {
+    display: none;
+}
+
+.listSwiper .swiper-slide.swiper-slide-active {
+    background: none;
+}
+
+.listSwiper .slide_imgbox {
+    background: transparent;
+    display: none;
+}
+
+.listSwiper .slide_imgbox img {
+    border-radius: 8px;
+    box-shadow: -3px -4px 5px 0 rgba(255, 255, 255, 0.7), 2px 3px 5px 0 rgba(124, 126, 130, 0.41);
+}
+
+.listSwiper .slide_imgbox h5 {
+    color: #000;
+    font-size: 12px;
+    font-weight: 700;
+    margin: 8px 0 0 0;
+    position: relative;
+    z-index: 1;
+}
+
+.listSwiper .swiper-slide-active .slide_imgbox {
+    display: block;
+}
+
+.listSwiper .swiper-button-next {
+
+    right: 0;
+    width: auto;
+}
+
+.listSwiper .swiper-button-next::after {
+    color: #333;
+    font-size: 14px;
+}
+
+.listSwiper .swiper-button-prev {
+
+    left: 0;
+    width: auto;
+}
+
+.listSwiper .swiper-button-prev::after {
+    color: #333;
+    font-size: 14px;
+}

@@ -1,0 +1,361 @@
+@charset "utf-8";
+@import url(../lib/bootstrap.min.css);
+@import url(../lib/jquery.fullpage.min.css);
+@import url(../lib/swiper-bundle.min.css);
+@import url(../css/swiper.css);
+
+/*
+ * File       : styles.css
+ * Date       : 2023. 06. 28
+ *
+ * Dependency : libs/bootstrap.min.css
+ *              libs/fullpage.min.css
+ *              libs/swiper-bundle.min.css
+ *              libs/swiper.css
+ *
+ * SUMMARY:
+ * 01) Global
+ * 02) Main
+ * 03) 
+ */
+
+/* **************************************** *
+ * Global
+ * **************************************** */
+
+@font-face {
+    font-family: 'NanumSquare';
+    font-weight: 300;
+    src: url(../font/NanumSquareL.woff2);
+    src: local(''),
+        url(../font/NanumSquareL.eot?#iefix) format('embedded-opentype'),
+        url(../font/NanumSquareL.woff2) format('woff2'),
+        url(../font/NanumSquareL.woff) format('woff'),
+        url(../font/NanumSquareL.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'NanumSquare';
+    font-weight: 400;
+    src: url(../font/NanumSquareR.woff2);
+    src: local(''),
+        url(../font/NanumSquareR.eot?#iefix) format('embedded-opentype'),
+        url(../font/NanumSquareR.woff2) format('woff2'),
+        url(../font/NanumSquareR.woff) format('woff'),
+        url(../font/NanumSquareR.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'NanumSquare';
+    font-weight: 700;
+    src: url(../font/NanumSquareB.woff2);
+    src: local(''),
+        url(../font/NanumSquareB.eot?#iefix) format('embedded-opentype'),
+        url(../font/NanumSquareB.woff2) format('woff2'),
+        url(../font/NanumSquareB.woff) format('woff'),
+        url(../font/NanumSquareB.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'NanumSquare';
+    font-weight: 800;
+    src: url(../font/NanumSquareEB.woff2);
+    src: local(''),
+        url(../font/NanumSquareEB.eot?#iefix) format('embedded-opentype'),
+        url(../font/NanumSquareEB.woff2) format('woff2'),
+        url(../font/NanumSquareEB.woff) format('woff'),
+        url(../font/NanumSquareEB.ttf) format('truetype');
+}
+
+* {
+    box-sizing: border-box;
+    line-height: 1.5;
+    letter-spacing: -1px;
+}
+
+:root,
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: 'NanumSquare', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+}
+
+dl,
+dt,
+dd,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    cursor: pointer;
+}
+
+button,
+input {
+    font-family: 'NanumSquare', sans-serif;
+}
+
+input:focus,
+input:hover {
+    outline: none;
+}
+
+textarea {
+    overflow: auto
+}
+
+.mo {
+    display: block;
+}
+
+.pc {
+    display: none;
+}
+
+@media (min-width: 992px) {
+    .mo {
+        display: none;
+    }
+
+    .pc {
+        display: block;
+    }
+}
+
+.i {
+    display: inline-block;
+}
+
+.i_menu {
+    background: url(../img/i_menu.png) no-repeat;
+    background-size: cover;
+    height: 30px;
+    width: 30px;
+}
+
+.i_home {
+    background: url(../img/i_home.png) no-repeat;
+    background-size: cover;
+    height: 30px;
+    width: 30px;
+}
+
+.header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.header_wrap {
+    align-items: center;
+    display: flex;
+    height: 66px;
+    justify-content: space-between;
+    padding: 0 16px;
+}
+
+.header_i {
+    display: flex;
+    margin: 0 -2px;
+}
+
+.header_i li {
+    display: flex;
+    padding: 0 2px;
+}
+
+.header_i li a {
+    display: flex;
+}
+
+.header_login {
+    display: flex;
+}
+
+.header_login li {
+    align-items: center;
+    display: flex;
+}
+
+.header_login li::after {
+    background: #565656;
+    content: '';
+    display: inline-block;
+    height: 8px;
+    margin: 0 8px;
+    width: 1px;
+}
+
+.header_login li:last-child::after {
+    display: none;
+}
+
+.header_login li a {
+    align-items: center;
+    color: #565656;
+    display: flex;
+    font-size: 10px;
+}
+
+.sc_wrap {
+    padding: 0 16px;
+}
+
+/* **************************************** *
+ * Main
+ * **************************************** */
+
+/* section 01 */
+.section_01 {
+    background: #f9f9f9;
+    padding: 90px 0 50px 0;
+    position: relative;
+}
+
+.section_01::before {
+    background: url(../img/bg_sc_left.png) no-repeat;
+    background-size: cover;
+    content: '';
+    display: inline-block;
+    height: 170px;
+    position: absolute;
+    top: 0;
+    width: 100px;
+}
+
+.section_01::after {
+    bottom: 0;
+    background: url(../img/bg_sc_right.png) no-repeat;
+    background-size: cover;
+    content: '';
+    display: inline-block;
+    height: 170px;
+    position: absolute;
+    right: 0;
+    width: 100px;
+}
+
+.section_01 .sc_wrap {
+    text-align: center;
+}
+
+.section_01 h1 {
+    color: #575757;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0 0 16px 0;
+    text-align: center;
+}
+
+.section_01 .main_logo {
+    width: 220px;
+}
+
+.section_01 h6 {
+    color: #256bc2;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.section_01 h6::before {
+    background: #256bc2;
+    content: '';
+    display: block;
+    height: 40px;
+    margin: 16px auto 16px auto;
+    width: 1px;
+}
+
+.main_cont_01 {
+    background: #f8f7f6;
+    border-radius: 96.7px;
+    box-shadow: -10.1px -12.4px 47px 0 #fff, 6.5px 10.1px 24px 0 rgba(112, 118, 140, 0.41);
+    border: solid 3px rgba(194, 194, 194, 0.08);
+    position: relative;
+    margin: 16px 16px 0 16px;
+    max-width: 400px;
+}
+
+@media (min-width: 416px) {
+    .main_cont_01 {
+        margin: 16px auto 0 auto;
+    }
+}
+
+.main_cont_01::after {
+    background: #256bc2;
+    content: '';
+    display: block;
+    height: 40px;
+    margin: 3px 0 0 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1px;
+}
+
+.main_cont_01 ul {
+    display: flex;
+    margin: 24px 0;
+    width: 100%;
+}
+
+.main_cont_01 ul li {
+    width: 33.3%;
+}
+
+.main_cont_01 dt {
+    color: #256bc2;
+    font-size: 16px;
+    font-weight: 800;
+    text-align: center;
+}
+
+.main_cont_01 dd {
+    color: #9b9b9b;
+    font-size: 12px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.section_01 .swiper_cont {
+    max-width: 400px;
+    margin: 40px 16px 0 16px;
+}
+
+@media (min-width: 416px) {
+    .section_01 .swiper_cont {
+        margin: 40px auto 0 auto;
+    }
+}
+
+/* section 02 */
