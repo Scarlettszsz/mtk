@@ -1,0 +1,374 @@
+/* **************************************** *
+ * Global
+ * **************************************** */
+@font-face {
+    font-family: 'Pretendard';
+    src: url('../font/PretendardVariable.ttf') format('ttf');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@600&display=swap');
+
+@font-face {
+    font-family: 'NanumSquare';
+    font-weight: 300;
+    src: url(../font/NanumSquareL.woff2);
+    src: local(''),
+        url(../font/NanumSquareL.eot?#iefix) format('embedded-opentype'),
+        url(../font/NanumSquareL.woff2) format('woff2'),
+        url(../font/NanumSquareL.woff) format('woff'),
+        url(../font/NanumSquareL.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'NanumSquare';
+    font-weight: 400;
+    src: url(../font/NanumSquareR.woff2);
+    src: local(''),
+        url(../font/NanumSquareR.eot?#iefix) format('embedded-opentype'),
+        url(../font/NanumSquareR.woff2) format('woff2'),
+        url(../font/NanumSquareR.woff) format('woff'),
+        url(../font/NanumSquareR.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'NanumSquare';
+    font-weight: 700;
+    src: url(../font/NanumSquareB.woff2);
+    src: local(''),
+        url(../font/NanumSquareB.eot?#iefix) format('embedded-opentype'),
+        url(../font/NanumSquareB.woff2) format('woff2'),
+        url(../font/NanumSquareB.woff) format('woff'),
+        url(../font/NanumSquareB.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'NanumSquare';
+    font-weight: 800;
+    src: url(../font/NanumSquareEB.woff2);
+    src: local(''),
+        url(../font/NanumSquareEB.eot?#iefix) format('embedded-opentype'),
+        url(../font/NanumSquareEB.woff2) format('woff2'),
+        url(../font/NanumSquareEB.woff) format('woff'),
+        url(../font/NanumSquareEB.ttf) format('truetype');
+} */
+
+* {
+    box-sizing: border-box;
+    line-height: 1.5;
+    letter-spacing: -1px;
+}
+
+:root,
+html {
+    font-size: 16px;
+}
+
+body {
+    /* font-family: 'NanumSquare', sans-serif; */
+    font-family: 'Pretendard', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+}
+
+dl,
+dt,
+dd,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    cursor: pointer;
+}
+
+button,
+input {
+    /* font-family: 'NanumSquare', sans-serif; */
+    font-family: 'Pretendard', sans-serif;
+}
+
+input:focus,
+input:hover {
+    outline: none;
+}
+
+textarea {
+    overflow: auto
+}
+
+.mo {
+    display: block;
+}
+
+.pc {
+    display: none;
+}
+
+@media (min-width: 992px) {
+    .mo {
+        display: none;
+    }
+
+    .pc {
+        display: block;
+    }
+}
+
+.mt_10 {
+    margin-top: 40px;
+}
+
+.ta_l {
+    text-align: left !important;
+}
+
+.i {
+    display: inline-block;
+}
+
+.i_menu {
+    background: url(../img/icon/i_menu.png) no-repeat;
+    background-size: cover;
+    height: 30px;
+    width: 30px;
+}
+
+@media (min-width: 992px) {
+    .i_menu {
+        height: 40px;
+        width: 40px;
+    }
+}
+
+.i_home {
+    background: url(../img/icon/i_home.png) no-repeat;
+    background-size: cover;
+    height: 30px;
+    width: 30px;
+}
+
+.i_more {
+    background: url(../img/icon/i_more.png) no-repeat;
+    background-size: cover;
+    height: 12px;
+    transition: all ease 1s;
+    width: 12px;
+}
+
+@media (min-width: 992px) {
+    .i_more {
+        height: 16px;
+        width: 16px;
+    }
+}
+
+.i_more:hover {
+    transform: rotate(90deg);
+}
+
+.header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.header_wrap {
+    align-items: center;
+    display: flex;
+    height: 66px;
+    justify-content: space-between;
+    padding: 0 16px;
+}
+
+.header_i {
+    display: flex;
+    margin: 0 -2px;
+}
+
+.header_i li {
+    display: flex;
+    padding: 0 2px;
+}
+
+.header_i li a {
+    display: flex;
+}
+
+.header_i li:nth-child(3) {
+    display: none;
+}
+
+.header_login {
+    display: flex;
+}
+
+.header_login li {
+    align-items: center;
+    display: flex;
+}
+
+.header_login li::after {
+    background: #565656;
+    content: '';
+    display: inline-block;
+    height: 8px;
+    margin: 0 8px;
+    width: 1px;
+}
+
+.header_login li:last-child::after {
+    display: none;
+}
+
+.header_login li a {
+    align-items: center;
+    color: #565656;
+    display: flex;
+    font-size: 10px;
+}
+
+@media (min-width: 992px) {
+    .header {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    .header_wrap {
+        height: 100px;
+        padding: 0 100px;
+    }
+
+    .header_i li:nth-child(2) {
+        display: none;
+    }
+
+    .header_i li:nth-child(3) {
+        display: flex;
+    }
+
+    .header_i img {
+        display: none;
+        height: 30px;
+    }
+
+    .header_i li a {
+        align-items: center;
+    }
+
+    .header_login li::after {
+        height: 12px;
+        transition: .5s;
+    }
+
+    .header_login li a {
+        font-size: 16px;
+        transition: .5s;
+    }
+
+    .header_login li.active a {
+        color: #fff;
+    }
+
+    .header_login li.active::after {
+        background: #fff;
+    }
+}
+
+@media (min-width: 1740px) {
+    .header_wrap {
+        max-width: 1720px;
+        margin: 0 auto;
+        padding: 0;
+    }
+}
+
+.footer {
+    background-color: #000;
+}
+
+.ft_wrap {
+    padding: 28px 16px;
+}
+
+.footer p {
+    color: #fff;
+    font-size: 12px;
+    font-weight: 400;
+    margin: 0 0 8px 0;
+}
+
+@media (min-width: 992px) {
+    .footer {
+        background-color: #000;
+    }
+
+    .ft_wrap {
+        padding: 28px 16px;
+    }
+
+    .footer p {
+        font-size: 12px;
+        margin: 0;
+    }
+}
+
+@media (min-width: 1300px) {
+    .ft_wrap {
+        margin: 0 auto;
+        max-width: 1280px;
+        padding: 28px 0;
+    }
+
+    .footer p {
+        font-size: 14px;
+        margin: 0;
+    }
+}
+
+.sc_wrap {
+    padding: 0 16px;
+}
+
+.container,
+.container-xl {
+    position: relative;
+    z-index: 2;
+}
+
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1280px;
+    }
+}
+
+@media (min-width: 1600px) {
+    .container-xl {
+        max-width: 1480px;
+    }
+}
