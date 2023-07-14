@@ -112,13 +112,13 @@
     }
 }
 
-.section_01 h1 {
+/* .section_01 h1 {
     animation: fade_right 1s;
 }
 
 .section_01 .main_logo {
     animation: fade_left 2s;
-}
+} */
 
 .section_01.active h1 {
     animation: fade_right 1s;

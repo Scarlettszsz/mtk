@@ -10,7 +10,7 @@ $(window)
           menu: "#header",
           verticalCentered: true, // 세로 중앙 정렬
           scrollOverflow: false,
-          sectionsColor: ["#fff", "#f9f9f9","#f9f9f9"], // 섹션별 컬러
+          sectionsColor: ["#fff", "#f9f9f9", "#f9f9f9"], // 섹션별 컬러
           navigation: true,
           keyboardScrolling: true,
           animateAnchor: true,
@@ -37,18 +37,17 @@ $(window)
 
             if (index == "4") {
               $("#lnb .line_02").show();
-              $("#lnb .lnb_menu_02 ul li").addClass("active");     
-              $(".header_login li").addClass("active");   
+              $("#lnb .lnb_menu_02 ul li").addClass("active");
+              $(".header_login li").addClass("active");
             } else if (index == "6") {
               $("#lnb .line_02").show();
-              $("#lnb .lnb_menu_02 ul li").addClass("active");  
-              $(".header_login li").addClass("active");   
+              $("#lnb .lnb_menu_02 ul li").addClass("active");
+              $(".header_login li").addClass("active");
             } else {
               $("#lnb .line_02").hide();
               $("#lnb .lnb_menu_02 ul li").removeClass("active");
-              $(".header_login li").removeClass("active");   
-            } 
- 
+              $(".header_login li").removeClass("active");
+            }
           },
         });
       });
@@ -125,7 +124,7 @@ $(window)
         slidesPerView: 1,
         spaceBetween: 0, // 슬라이드 여백
         centeredSlides: true, // 슬라이드 중앙정렬
-        effect : 'fade',
+        effect: "fade",
         loop: true, // 무한반복
         autoplay: {
           delay: 2000,
@@ -138,7 +137,7 @@ $(window)
         slidesPerView: 1,
         spaceBetween: 0, // 슬라이드 여백
         centeredSlides: true, // 슬라이드 중앙정렬
-        effect : 'fade',
+        effect: "fade",
         loop: true, // 무한반복
         autoplay: {
           delay: 2000,
@@ -151,7 +150,7 @@ $(window)
         slidesPerView: 1,
         spaceBetween: 0, // 슬라이드 여백
         centeredSlides: true, // 슬라이드 중앙정렬
-        effect : 'fade',
+        effect: "fade",
         loop: true, // 무한반복
         autoplay: {
           delay: 2000,
@@ -164,13 +163,28 @@ $(window)
         slidesPerView: 1,
         spaceBetween: 0, // 슬라이드 여백
         centeredSlides: true, // 슬라이드 중앙정렬
-        effect : 'fade',
+        effect: "fade",
         loop: true, // 무한반복
         autoplay: {
           delay: 4000,
           // disableOnInteraction: true // 쓸어 넘기거나 버튼 클릭 시 자동 슬라이드 정지
         },
         navigation: false,
+      });
+
+      // consulting_partnerSubSwiper
+      var partnerSubSwiper = new Swiper(".partnerSubSwiper", {
+        slidesPerView: 4,
+        spaceBetween: 16, // 슬라이드 여백
+        centeredSlides: false, // 슬라이드 중앙정렬
+        loop: true, // 무한반복
+        autoplay: {
+          delay: 3000,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
       });
     } else {
       // 디바이스 크기가 992px 이하일 때
@@ -213,6 +227,43 @@ $(window)
           delay: 3000,
         },
       });
+
+      // consulting_partnerSubSwiper
+      var partnerSubSwiper = new Swiper(".partnerSubSwiper", {
+        slidesPerView: 3,
+        spaceBetween: 8, // 슬라이드 여백
+        centeredSlides: false, // 슬라이드 중앙정렬
+        loop: true, // 무한반복
+        autoplay: {
+          delay: 3000,
+        },
+      });
     }
   })
   .resize();
+
+$(document).ready(function () {
+  $(".sub_menu li").click(function () {
+    $(this).toggleClass("active");
+  });
+}
+);
+
+// sub top fixed
+let topFixed = document.getElementById("top_fixed");
+window.onscroll = function () {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    topFixed.style.display = "block";
+  } else {
+    topFixed.style.display = "none";
+  }
+}
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
