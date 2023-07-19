@@ -57,11 +57,10 @@ $(window)
         slidesPerView: 9,
         spaceBetween: 0, // 슬라이드 여백
         centeredSlides: true, // 슬라이드 중앙정렬
-        // initialSlide: 1, //초기 슬라이드 색인 번호
+        centeredSlidesBounds: true, // t슬라이드 시작과 끝의 중앙배치
         loop: true, // 무한반복
         autoplay: {
           delay: 4000,
-          // disableOnInteraction: true // 쓸어 넘기거나 버튼 클릭 시 자동 슬라이드 정지
         },
         navigation: {
           nextEl: ".swiper-button-next",
@@ -70,15 +69,15 @@ $(window)
       });
 
       // partnerSwiperOne
-      var partnerSwiperOne = new Swiper(".partnerSwiperOne", {
+      var partnerSwiper = new Swiper(".partnerSwiper", {
         slidesPerView: 4,
         spaceBetween: 0, // 슬라이드 여백
-        centeredSlides: false, // 슬라이드 중앙정렬
         loop: true, // 무한반복
         autoplay: {
           delay: 2000,
         },
       });
+      
 
       // partnerSwiperOne + Two 연동제어
       // partnerSwiperOne.controller.control = partnerSwiperTwo;
@@ -99,10 +98,10 @@ $(window)
       var serviceIcon01 = new Swiper(".serviceIcon01", {
         slidesPerView: 5,
         spaceBetween: 16, // 슬라이드 여백
-        centeredSlides: false, // 슬라이드 중앙정렬
         loop: true, // 무한반복
         autoplay: {
-          delay: 4000,
+          delay: 1000,
+          disableOnInteraction: false,
         },
         navigation: false,
       });
@@ -186,6 +185,28 @@ $(window)
           prevEl: ".swiper-button-prev",
         },
       });
+
+      // 상세페이지 Swiper
+      // 명함
+      var product_01_01 = new Swiper(".product_01_01", {
+        slidesPerView: 3,
+        grid: {
+          rows: 3,
+        },
+        spaceBetween: 20,
+      });
+
+      var product_01_02 = new Swiper(".product_01_02", {
+        spaceBetween: 10,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        thumbs: {
+          swiper: product_01_01,
+        },
+      });
+
     } else {
       // 디바이스 크기가 992px 이하일 때
 
@@ -238,6 +259,25 @@ $(window)
           delay: 3000,
         },
       });
+
+      // 상세페이지 Swiper
+      // 명함
+      var product_01_01 = new Swiper(".product_01_01", {
+        spaceBetween: 10,
+        slidesPerView: 2,
+        freeMode: true,
+        watchSlidesProgress: true,
+      });
+      var product_01_02 = new Swiper(".product_01_02", {
+        spaceBetween: 10,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        thumbs: {
+          swiper: product_01_01,
+        },
+      });
     }
   })
   .resize();
@@ -246,8 +286,7 @@ $(document).ready(function () {
   $(".sub_menu li").click(function () {
     $(this).toggleClass("active");
   });
-}
-);
+});
 
 // sub top fixed
 let topFixed = document.getElementById("top_fixed");
