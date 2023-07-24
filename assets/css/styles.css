@@ -3047,8 +3047,226 @@ section.container {
         font-size: 32px;
         margin: 0 0 20px 0;
     }
+
 }
 
+.writing-modal .modal-header {
+    border-bottom: 0;
+    padding: 12px;
+}
+
+.writing-modal .modal-title {
+    font-size: 16px;
+}
+
+.writing-modal .modal-header .btn-close {
+    height: 20px;
+    width: 20px;
+}
+
+.writing-modal .modal_body_area {
+    border-top: 1px solid #898989;
+    padding: 16px 0 0 0;
+}
+
+.writing-modal .modal-body {
+    padding: 0 12px;
+}
+
+.writing-modal p {
+    color: #444444;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 2;
+    padding: 12px 0 0 0;
+    text-align: center;
+}
+
+.writing-modal h6 {
+    color: #444444;
+    font-size: 14px;
+    margin: 0 0 12px 0;
+    text-align: center;
+}
+
+.writing-modal .star {
+    font-size: 20px;
+    justify-content: center;
+}
+
+.writing-modal .input_area {
+    margin: 20px 0 0 0;
+}
+
+.writing-modal .input_group {
+    border-bottom: 1px solid #000;
+    display: flex;
+    margin: 12px 0;
+}
+
+.writing-modal .input_group label {
+    border-bottom: 0;
+    width: 48%;
+}
+
+.writing-modal .input_group input {
+    margin: 0 0 0 8px;
+}
+
+.w_17 {
+    width: 17% !important;
+}
+
+.writing-modal textarea {
+    border: 1px solid #444;
+    border-radius: 8px;
+    margin: 12px 0;
+    width: 100%;
+}
+
+.caution h4 {
+    font-size: 14px;
+    margin: 0 0 8px 0;
+}
+
+.caution h4::before {
+    background: url(../img/icon/i_exclamation-circle.svg);
+    background-size: cover;
+    content: '';
+    display: inline-block;
+    height: 12px;
+    margin: 0 4px 0 0;
+    width: 12px;
+}
+
+.caution ul li {
+    font-size: 12px;
+}
+
+.writing-modal .modal-footer {
+    border-top: 0;
+    justify-content: center;
+}
+
+
+.writing-modal .modal-footer button {
+    background: #55acfd;
+    border: 0;
+    width: 70px;
+}
+
+
+
+@media (min-width: 1300px) {
+    .writing-modal .modal-dialog {
+        max-width: 1200px;
+    }
+
+    .writing-modal .modal-header {
+        padding: 16px 40px;
+    }
+
+    .writing-modal .modal-title {
+        font-size: 20px;
+    }
+
+    .writing-modal .modal-body {
+        border-top: 1px solid #898989;
+        margin: 0 40px;
+    }
+
+    .writing-modal .modal_body_area {
+        border: 0;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .writing-modal p {
+        border: 0;
+        font-size: 20px;
+    }
+
+    .writing-modal h6 {
+        font-size: 16px;
+    }
+
+    .writing-modal .star {
+        font-size: 24px;
+    }
+}
+
+
+.review-modal .modal-body {
+    border-bottom: 1px solid #000;
+    border-top: 1px solid #000;
+    margin: 0 12px 20px 12px;
+    padding: 0;
+}
+
+.writing-modal .modal_review {
+    border-bottom: 1px solid #898989;
+    padding: 12px 0;
+}
+
+.writing-modal h5 {
+    font-size: 15px;
+    margin: 0 0 8px;
+}
+
+.writing-modal .data {
+    display: flex;
+}
+
+.writing-modal .data>li {
+    font-size: 14px;
+    margin: 0 20px 0 0;
+}
+
+.writing-modal .data .star {
+    font-size: 14px;
+}
+
+.modal_review_text {
+    margin: 12px 0;
+}
+
+.modal_review_text p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    padding: 0;
+    text-align: left;
+}
+
+@media (min-width: 1300px) {
+    .review-modal .modal-body {
+        margin: 0 40px 40px 40px;
+    }
+
+    .writing-modal .modal_review {
+        padding: 20px 0;
+    }
+
+    .writing-modal h5 {
+        font-size: 18px;
+    }
+
+    .writing-modal .data>li {
+        font-size: 16px;
+    }
+    
+    .writing-modal .data .star {
+        font-size: 16px;
+    }
+
+    .modal_review_text {
+        margin: 20px 0;
+    }
+
+    .modal_review_text p {
+        font-size: 16px;
+    }
+}
 /* **************************************** *
  * About
  * **************************************** */
