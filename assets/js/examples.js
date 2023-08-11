@@ -73,15 +73,14 @@ $(window)
         slidesPerView: 4,
         spaceBetween: 0, // 슬라이드 여백
         loop: true, // 무한반복
+        grid: {
+          rows: 2,
+        },
         autoplay: {
           delay: 2000,
         },
       });
       
-
-      // partnerSwiperOne + Two 연동제어
-      // partnerSwiperOne.controller.control = partnerSwiperTwo;
-      // partnerSwiperTwo.controller.control = partnerSwiperOne;
 
       // ppSwiper
       var portfolioSwiper = new Swiper(".portfolioSwiper", {
@@ -180,6 +179,9 @@ $(window)
         autoplay: {
           delay: 3000,
         },
+        grid: {
+          rows: 3,
+        },
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
@@ -233,6 +235,9 @@ $(window)
         spaceBetween: 0, // 슬라이드 여백
         centeredSlides: true, // 슬라이드 중앙정렬
         loop: true, // 무한반복
+        grid: {
+          rows: 2,
+        },
         autoplay: {
           delay: 2000,
         },
@@ -257,6 +262,9 @@ $(window)
         loop: true, // 무한반복
         autoplay: {
           delay: 3000,
+        },
+        grid: {
+          rows: 3,
         },
       });
 
