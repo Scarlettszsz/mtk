@@ -1154,9 +1154,17 @@
         padding: 0;
     }
 
+    /* 20231013 추가 */
+    .section_05.new {
+        background: url(../img/background/section_05_new.png);
+        background-size: 100% 100%;
+        padding: 0;
+    }
+
     .main_cont_05 {
-        align-items: flex-start;
+        align-items: center;
         display: flex;
+        flex-direction: column;
         height: 100%;
     }
 
@@ -1169,23 +1177,9 @@
         background: #fff;
     }
 
-    .main_cont_05 .sc_left,
-    .main_cont_05 .sc_right {
-        width: 50%;
-    }
-
-    .main_cont_05 .sc_left {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
     .main_cont_05 .sc_left_top {
         display: flex;
         flex-direction: column;
-        height: calc(100vh - 350px);
-        padding: 100px 100px 40px 100px;
-        width: 100%;
     }
 
     .main_cont_05 .sc_left_bot {
@@ -1233,6 +1227,77 @@
         background-image: url(../img/work/work_09.png);
         height: 250px;
         margin: 8px 0;
+        width: 100%;
+    }
+
+    /* 20231013 추가 */
+    #section_04 .container {
+        max-width: 1100px;
+    }
+
+    .main_cont_05 .sc_left {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .main_cont_05 .sc_left .sc_left_top {
+        width: 30%;
+    }
+
+    .main_cont_05 .sc_left .sc_left_top .work_top {
+        margin: 0;
+    }
+
+    .main_cont_05 .sc_left .sc_right_top {
+        width: 65%;
+    }
+
+
+    .main_cont_05 .sc_bottom .row {
+        justify-content: space-between
+    }
+
+    .main_cont_05 .sc_bottom .row .col-4 {
+        width: 30%;
+    }
+
+    .ppt_header h2 {
+        background: #000;
+        border-top-left-radius: 16px;
+        border-top-right-radius: 16px;
+        color: #fff;
+        font-size: 16px;
+        padding: 8px 0 4px 0;
+        text-align: center;
+    }
+
+    .ppt_header p {
+        font-size: 16px;
+        margin: 12px 0 0 0;
+    }
+
+    .ppt_body {
+        margin: 24px 0 20px 0;
+    }
+
+    .ppt_body ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .ppt_body ul li {
+        border: 1px solid #a6a6a6;
+        color: #7b7b7b;
+        font-size: 16px;
+        padding: 16px;
+        text-align: center;
+        width: calc((100% /2) - 6px);
+    }
+
+    .ppt_footer img {
         width: 100%;
     }
 
@@ -1758,7 +1823,8 @@
         width: 10px;
     }
 
-    #fp-nav ul li:hover a span, .fp-slidesNav ul li:hover a span {
+    #fp-nav ul li:hover a span,
+    .fp-slidesNav ul li:hover a span {
         height: 1px;
         margin: 0;
         width: 10px;
@@ -3254,7 +3320,7 @@ section.container {
     .writing-modal .data>li {
         font-size: 16px;
     }
-    
+
     .writing-modal .data .star {
         font-size: 16px;
     }
@@ -3955,6 +4021,17 @@ section.container {
     width: 100%;
 }
 
+.process.ico li {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.process.ico li img {
+    width: 32px;
+}
+
 @media (min-width: 576px) {
 
     .tab_container .nav,
@@ -4093,6 +4170,10 @@ section.container {
         top: 33%;
         transform: translate(-50%);
         width: 16px;
+    }
+
+    .process.ico li img {
+        width: min-content;
     }
 }
 

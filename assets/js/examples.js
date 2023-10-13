@@ -35,11 +35,11 @@ $(window)
               $("#top_fixed").fadeOut();
             }
 
-            if (index == "4") {
+            if (index == "5") {
               $("#lnb .line_02").show();
               $("#lnb .lnb_menu_02 ul li").addClass("active");
               $(".header_login li").addClass("active");
-            } else if (index == "6") {
+            } else if (index == "7") {
               $("#lnb .line_02").show();
               $("#lnb .lnb_menu_02 ul li").addClass("active");
               $(".header_login li").addClass("active");
@@ -206,6 +206,17 @@ $(window)
         },
         thumbs: {
           swiper: product_01_01,
+        },
+      });
+
+      // pptDesignSwiper
+      var pptDesignSwiper = new Swiper(".pptDesignSwiper", {
+        slidesPerView: 3,
+        spaceBetween: 0, // 슬라이드 여백
+        loop: true, // 무한반복
+        // touchRatio: 0,//드래그 금지
+        autoplay: {
+          delay: 2500,
         },
       });
 
